@@ -1,0 +1,44 @@
+[
+  {
+    "key": "1",
+    "title": "Cox's bazar Tour Packege",
+    "photo": "https://explaintour.com/wp-content/uploads/2021/01/Coxs-Bazar-Sea-Beach-Bangladesh.jpg",
+    "description": "The beach in Cox’s Bazar is the main attraction of the town with a whole length of 150km, 90 miles also termed the “longest natural unbroken sea beach” in the world. There are several three-star and five-star hotels that present the exclusive beachside area with accessories for the tourist. Visitors of the other hotels visit Laboni beach which is the area of the beach closest to the town.",
+    "price": 200
+  },
+  {
+    "key": "2",
+    "title": "Bali Tour Packege",
+    "photo": "https://explaintour.com/wp-content/uploads/2021/02/Best-bali-1.jpg",
+    "description": "Bali is a state of Indonesia and the westernmost of the Lesser Sunda Islands. The East of Java and therefore the west of Lombok, the state includes the island of Bali and a couple of smaller neighboring islands, notably Nusa Penida, Nusa Lembongan, and Nusa Ceningan",
+    "price": 400
+  },
+  {
+    "key": "3",
+    "title": "The UK’s All-in-One Tour Packege",
+    "photo": "https://explaintour.com/wp-content/uploads/2021/02/Best-Places-in-UK.jpg",
+    "description": "Consisting of England, Scotland, Wales, and Northern Ireland, the United Kingdom (UK) has for quite some time been one of Europe’s most famous tourist destinations. The country’s allure has a lot to do with its diverse scenery and rich social legacy. The best places to visit incorporate everything from wonderfully preserved country estates and castles to its numerous a-list workmanship galleries and museums.",
+    "price": 600
+  },
+  {
+    "key": "4",
+    "title": "Grand Canyon National Park Tour Packege",
+    "photo": "https://explaintour.com/wp-content/uploads/2021/02/Grand-Canyon-National-Park.jpg",
+    "description": "The Grand Canyon may be a steep-sided canyon carved by the Colorado River in Arizona, US. The Grand Canyon is 446 km long, up to 29 km wide and achieves a profundity of over a mile 6,093 feet.The canyon and adjacent rim are contained within Grand Canyon park, the Kaibab National Forest, Grand Canyon–Parashant memorial, the Hualapai Reservation, the Havasupai reservation and therefore the Navajo Nation.",
+    "price": 500
+  },
+  {
+    "key": "5",
+    "title": "Things to Do in Grand Canyon Tour Packege",
+    "photo": "https://explaintour.com/wp-content/uploads/2021/02/Things-to-do-in-Grand-Canyon.jpg",
+    "description": "Grand Canyon is a world-famous National Park and a significant place to travel. There are so many places in Grand Canyon where you can spend quality time with family and friends. We collect some most visited and quality things to do places. Hope you find your best things to do in Grand Canyon.",
+    "price": 450
+  },
+  {
+    "key": "6",
+    "title": "Bandarban Tour Packege",
+    "photo": "https://amazingtoursbd.com/tour_image/1606908306.jpg",
+    "description": "Bandarban Hill District is blissed with beauties & culture. You’ll find great mountain views in bandarban. It treks through virgin forests and chance to meet more than 15 tribes. Bandarban town which lies on the Sangu River, 92km from Chittagong. The river is the center of local life: epically long bamboo rafts, steered by a solitary boatman.",
+    "price": 300
+  }
+]
