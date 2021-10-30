@@ -7,24 +7,41 @@ const Myorders = () => {
   const [allOrders, setAllOrders] = useState([]);
   const [myAllOrders, setMyAllOrders] = useState([]);
   useEffect(() => {
-    fetch("https://ancient-sierra-47669.herokuapp.com/bookedPackages")
+    fetch("https:/ancient-sierra-47669.herokuapp.com/bookedPackages")
       .then((res) => res.json())
       .then((data) => setAllOrders(data));
   }, []);
 
   useEffect(() => {
     const myOrders = allOrders.filter(
-      (myorder) => myorder.customerEmail == user?.email
+      (myorder) => myorder.customerEmail === user.email
     );
     setMyAllOrders(myOrders);
   }, [allOrders]);
+  const handleDeleteOrder = (id) => {
+    const url = `https:/ancient-sierra-47669.herokuapp.com/bookedPackages/${id}`;
+    console.log(id);
+    fetch(url, {
+      method: "DELETE",
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.deleteCount) {
+          const remainingMyOrder = myAllOrders.filter(
+            (remainOrders) => remainOrders._id !== id
+          );
+          setMyAllOrders(remainingMyOrder);
+        }
+        window.location.reload();
+      });
+  };
   console.log(myAllOrders);
   return (
     <div className="container">
       <div className="d-flex align-items-center justify-content-center title-styel">
         <div>
           <h1 className="title-styel text-center text-success mt-4">
-            You Total Booked {myAllOrders.length} Tour Packages
+            You Total Booked {myAllOrders?.length} Tour Packages
           </h1>
         </div>
       </div>
@@ -35,25 +52,25 @@ const Myorders = () => {
               <Card.Img
                 variant="top"
                 style={{ height: "190px" }}
-                src={myOrders.bookedPackage.photo}
+                src={myOrders?.bookedPackage?.photo}
               />
               <Card.Body>
-                <Card.Title>{myOrders.bookedPackage.title}</Card.Title>
+                <Card.Title>{myOrders?.bookedPackage?.title}</Card.Title>
                 <Card.Text>
                   <p>
                     <small> Date: </small>
-                    {myOrders.date}
+                    {myOrders?.date}
                   </p>
                 </Card.Text>
                 <Card.Text>
                   <p>
                     <small>Price: </small>
-                    {myOrders.bookedPackage.price}
+                    {myOrders?.bookedPackage?.price}
                   </p>
                 </Card.Text>
 
                 <Button
-                  //   onClick={() => handleDelete(myOrders._id)}
+                  onClick={() => handleDeleteOrder(myOrders?._id)}
                   className="fw-bold"
                   variant="danger"
                 >
