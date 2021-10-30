@@ -1,6 +1,5 @@
 import React from "react";
 import HomeBanner from "../HomeBanner/HomeBanner";
-import NavSection from "../NavSection/NavSection";
 import Packeges from "../Packeges/Packeges";
 
 const Home = () => {
