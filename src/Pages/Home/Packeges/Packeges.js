@@ -4,7 +4,7 @@ import Packege from "../Packege/Packege";
 const Packeges = () => {
   const [packeges, setPackeges] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:7000/tourPackeges")
+    fetch("https://ancient-sierra-47669.herokuapp.com/tourPackeges")
       .then((res) => res.json())
       .then((data) => setPackeges(data));
   }, []);
