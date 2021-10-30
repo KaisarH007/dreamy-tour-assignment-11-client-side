@@ -14,7 +14,9 @@ const Packeges = () => {
         <h1 className="title-stye ">Our Tour Packeges</h1>
       </div>
       {packeges.map((packege) => (
-        <Packege key={packege.key} packege={packege}></Packege>
+        <div className="row">
+          <Packege key={packege.key} packege={packege}></Packege>
+        </div>
       ))}
     </div>
   );

@@ -27,7 +27,7 @@ const HomeBanner = () => {
           <Carousel.Item>
             <img
               className="d-block w-100 "
-              style={{ height: "300px" }}
+              style={{ height: "300px", width: "100%" }}
               src={banner1}
               alt="First slide"
             />
@@ -38,7 +38,7 @@ const HomeBanner = () => {
           <Carousel.Item>
             <img
               className="d-block w-100"
-              style={{ height: "300px" }}
+              style={{ height: "300px", width: "100%" }}
               src={banner2}
               alt="Second slide"
             />
@@ -50,7 +50,7 @@ const HomeBanner = () => {
           <Carousel.Item>
             <img
               className="d-block w-100"
-              style={{ height: "300px" }}
+              style={{ height: "300px", width: "100%" }}
               src={banner3}
               alt="Third slide"
             />
@@ -62,7 +62,7 @@ const HomeBanner = () => {
           <Carousel.Item>
             <img
               className="d-block w-100"
-              style={{ height: "300px" }}
+              style={{ height: "300px", width: "100%" }}
               src={banner4}
               alt="Fourth slide"
             />

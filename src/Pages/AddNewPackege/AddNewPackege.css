@@ -1,0 +1,20 @@
+.add-service {
+  height: 100%;
+}
+
+.add-service form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.add-service input,
+textarea {
+  width: 40%;
+  margin-bottom: 15px;
+  padding: 10px;
+}
+.title-styel {
+  font-size: 50px;
+  font-weight: 900;
+}
