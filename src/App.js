@@ -10,6 +10,7 @@ import ManageAllOrders from "./Pages/ManageAllOrders/ManageAllOrders";
 import OrderDetails from "./Pages/OrderDetails/OrderDetails";
 import NotFound from "./Pages/NotFound/NotFound";
 import AuthProvider from "./AuthProvider/AuthProvider";
+import Myorders from "./Pages/MyOrders/Myorders";
 
 function App() {
   return (
@@ -32,7 +33,10 @@ function App() {
           <Route path="/manageAllOrders">
             <ManageAllOrders></ManageAllOrders>
           </Route>
-          <Route path="/myOrders/:id">
+          <Route path="/myOrders">
+            <Myorders></Myorders>
+          </Route>
+          <Route path="/packageDetails/:packageID">
             <OrderDetails></OrderDetails>
           </Route>
           <Route path="*">

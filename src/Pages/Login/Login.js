@@ -7,7 +7,7 @@ import useAuth from "../../Hooks/useAuth";
 const Login = () => {
   const { handleGoogleLogIn } = useAuth();
   return (
-    <div style={{ height: "100vh" }} className="container">
+    <div style={{ height: "100%" }} className="container">
       <div className="row">
         <div className="col-md-6  d-flex align-items-center justify-content-center">
           <div className="card p-5">

@@ -1,5 +1,6 @@
 import React from "react";
 import { Button, Card } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 const Packege = ({ packege }) => {
   return (
@@ -17,7 +18,9 @@ const Packege = ({ packege }) => {
             </Card.Text>
             <p>{packege.description}</p>
             <Card.Text></Card.Text>
-            <Button variant="primary">Primary</Button>
+            <Link to={`packageDetails/${packege._id}`}>
+              <Button variant="primary">Booking Tour</Button>
+            </Link>
           </Card.Body>
         </Card>
       </div>

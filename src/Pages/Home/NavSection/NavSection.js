@@ -37,7 +37,7 @@ const NavSection = () => {
             <Nav.Link className="text-white" as={Link} to="/manageAllOrders">
               Manage All Orders
             </Nav.Link>
-            <Nav.Link className="text-white" as={Link} to="/myOrders/:id">
+            <Nav.Link className="text-white" as={Link} to="/myOrders">
               My Orders
             </Nav.Link>
 

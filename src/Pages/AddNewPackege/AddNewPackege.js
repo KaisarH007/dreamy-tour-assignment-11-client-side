@@ -3,16 +3,14 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import "./AddNewPackege.css";
 const AddNewPackege = () => {
-  const {
-    register,
-    handleSubmit,
-    watch,
-    formState: { errors },
-  } = useForm();
+  const { register, handleSubmit, reset } = useForm();
   const onSubmit = (data) => {
-    axios.post("http://localhost:7000/tourPackeges", data).then((res) => {
-      console.log(res);
-    });
+    axios
+      .post("https://ancient-sierra-47669.herokuapp.com/tourPackeges", data)
+      .then((res) => {
+        alert("Successfully Added New Package");
+        reset();
+      });
     console.log(data);
   };
   return (
