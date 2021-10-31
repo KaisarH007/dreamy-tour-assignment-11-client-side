@@ -18,17 +18,10 @@ const useFirebase = () => {
   const [isLoading, setIsLoading] = useState(true);
   const auth = getAuth();
 
-  // const history = useHistory();
-  // const location = useLocation();
-  // const url = location.state?.from || "/home";
-
   const googleProvider = new GoogleAuthProvider();
 
-  const handleGoogleLogIn = () => {
-    signInWithPopup(auth, googleProvider).then((result) => {
-      setUser(result.user);
-      // history.push(url);
-    });
+  const signInWithGoogle = () => {
+    return signInWithPopup(auth, googleProvider);
   };
 
   useEffect(() => {
@@ -50,7 +43,7 @@ const useFirebase = () => {
   };
   return {
     user,
-    handleGoogleLogIn,
+    signInWithGoogle,
     handleLogOut,
     isLoading,
     setIsLoading,

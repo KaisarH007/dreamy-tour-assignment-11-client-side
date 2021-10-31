@@ -4,8 +4,19 @@ import { Button } from "react-bootstrap";
 import loginBanner from "../../images/login-photo.jpg";
 import logo from "../../images/Google__G__Logo.svg.png";
 import useAuth from "../../Hooks/useAuth";
+import { useHistory, useLocation } from "react-router";
 const Login = () => {
-  const { handleGoogleLogIn } = useAuth();
+  const { signInWithGoogle } = useAuth();
+
+  const history = useHistory();
+  const location = useLocation();
+  const url = location.state?.from || "/home";
+  const handleGoogleLogIn = () => {
+    signInWithGoogle().then((result) => {
+      history.push(url);
+    });
+  };
+
   return (
     <div style={{ height: "100%" }} className="container">
       <div className="row">
