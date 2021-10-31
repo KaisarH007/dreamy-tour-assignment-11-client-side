@@ -20,7 +20,18 @@ const Packeges = () => {
       ) : (
         <div>
           <div className="center  d-flex align-items-center justify-content-center">
-            <h1 className="title-stye ">Our Tour Packeges</h1>
+            <div>
+              <h1 className=" text-center fw-bold ">
+                Our Most Popular Tour Packeges
+              </h1>
+              <p className="text-center">
+                Travel takes us out of our comfort zones and inspires us to see,
+                taste and try new things. It constantly challenges us, not only
+                to adapt to and explore new surroundings, but also to engage
+                with different people, to embrace adventures as they come and to
+                share new and meaningful experiences with friends and loved ones
+              </p>
+            </div>
           </div>
           {packeges.map((packege) => (
             <div className="row">

@@ -24,9 +24,11 @@ const NavSection = () => {
         sticky="top"
       >
         <Container>
-          <Navbar.Brand className="d-flex">
-            <img style={{ width: "100px" }} src={logo} alt="" />{" "}
-            <h4 className="fw-bold mt-4"> Dreamy Tour</h4>
+          <Navbar.Brand>
+            <Nav.Link className="text-white d-flex" as={Link} to="/home">
+              <img style={{ width: "100px" }} src={logo} alt="" />
+              <h4 className="fw-bold mt-4"> Dreamy Tour</h4>
+            </Nav.Link>
           </Navbar.Brand>
           <Navbar.Toggle />
           <Navbar.Collapse className="justify-content-end  fs-5 fw-bold">

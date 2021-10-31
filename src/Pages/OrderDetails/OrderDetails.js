@@ -40,7 +40,7 @@ const OrderDetails = () => {
         <div className="col-md-6 d-flex align-items-center justify-content-center">
           <div>
             <h2>{title}</h2>
-            <h4 className="text-warning">${price}</h4>
+            <h4 className="text-primary">${price}</h4>
             <p>{description}</p>
           </div>
         </div>
@@ -48,7 +48,7 @@ const OrderDetails = () => {
       <div className="add-service my-5">
         <div className="d-flex align-items-center justify-content-center ">
           <div>
-            <p className="text-center text-success mt-2">
+            <p className="text-center fw-bold text-primary mt-2">
               Please fill up the below form and submit for confirm your exiting
               tour with Dreamy Tour
             </p>
@@ -77,7 +77,11 @@ const OrderDetails = () => {
             placeholder={new Date()}
           />
 
-          <input type="submit" />
+          <input
+            className="button-bg btn text-white"
+            type="submit"
+            value="CONFIRM"
+          />
         </form>
       </div>
     </div>

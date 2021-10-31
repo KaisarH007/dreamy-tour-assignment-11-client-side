@@ -19,7 +19,9 @@ const Packege = ({ packege }) => {
             <p>{packege.description}</p>
             <Card.Text></Card.Text>
             <Link to={`packageDetails/${packege._id}`}>
-              <Button variant="primary">Booking Tour</Button>
+              <Button variant className="button-bg text-white fw-bold">
+                Booking Tour
+              </Button>
             </Link>
           </Card.Body>
         </Card>

@@ -20,8 +20,9 @@ const Footer = () => {
               Travels
             </h3>
             <p className="text-muted">
-              Great lesson ideas and lesson plans for ESL teachers! Educators
-              can customize lesson plans to best.
+              Travel takes us out of our comfort zones and inspires us to see,
+              taste and try new things. It constantly challenges us, not only to
+              adapt to and explore new surroundings.
             </p>
             <small>{phoneIcon} +92555666333</small> <br />
             <small>{mailIcon} dreamy_travelsy@gmail.com</small> <br />
@@ -42,9 +43,7 @@ const Footer = () => {
               type="text"
               placeholder="Enter your email"
             />
-            <Button variant="success" className="p-2">
-              Submit
-            </Button>{" "}
+            <Button className="p-2 btn  button-bg">Submit</Button>
             <p>
               <small className="text-muted">
                 Get the latest news and updates right at your inbox.

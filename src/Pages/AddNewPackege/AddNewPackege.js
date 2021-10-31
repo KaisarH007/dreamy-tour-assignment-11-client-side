@@ -42,7 +42,7 @@ const AddNewPackege = () => {
 
         <input {...register("key")} placeholder="Packege key code" required />
 
-        <input className=" btn btn-primary" type="submit" />
+        <input className="button-bg btn text-white" type="submit" value="ADD" />
       </form>
     </div>
   );
