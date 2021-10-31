@@ -11,21 +11,23 @@ const ManageAllOrders = () => {
       .then((data) => setOrderedPackages(data));
   }, []);
   const handleDeleteOrder = (id) => {
-    const url = `https://ancient-sierra-47669.herokuapp.com/bookedPackages/${id}`;
-    fetch(url, {
-      method: "DELETE",
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        console.log(data);
-        if (data.deletedCount) {
-          const remainingServices = orderdPackages.filter(
-            (orderdPackage) => orderdPackage._id !== id
-          );
-          setOrderedPackages(remainingServices);
-        }
-      });
-    window.confirm("Want to DELETE?");
+    const response = window.confirm("Want to DELETE?");
+    if (response === true) {
+      const url = `https://ancient-sierra-47669.herokuapp.com/bookedPackages/${id}`;
+      fetch(url, {
+        method: "DELETE",
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          console.log(data);
+          if (data.deletedCount) {
+            const remainingServices = orderdPackages.filter(
+              (orderdPackage) => orderdPackage._id !== id
+            );
+            setOrderedPackages(remainingServices);
+          }
+        });
+    }
   };
 
   if (orderdPackages.length === 0) {
