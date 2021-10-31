@@ -12,7 +12,7 @@ const Speciality = () => {
           <div className="center  d-flex align-items-center justify-content-center">
             <img style={{ width: "100px" }} src={logo} alt="" />
           </div>
-          <h1 className=" text-center fw-bold  ">Our Specialites</h1>
+          <h1 className=" text-center fw-bold  ">Our Specialities</h1>
           <p className="text-center">
             Travel takes us out of our comfort zones and inspires us to see,
             taste and try new things. It constantly challenges us, not only to
