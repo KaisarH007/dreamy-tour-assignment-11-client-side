@@ -6,8 +6,9 @@ const Myorders = () => {
   const { user } = useAuth();
   const [allOrders, setAllOrders] = useState([]);
   const [myAllOrders, setMyAllOrders] = useState([]);
+  const [remainingAllOrders, setRemainingAllOrders] = useState([]);
   useEffect(() => {
-    fetch("https:/ancient-sierra-47669.herokuapp.com/bookedPackages")
+    fetch("https://ancient-sierra-47669.herokuapp.com/bookedPackages")
       .then((res) => res.json())
       .then((data) => setAllOrders(data));
   }, []);
@@ -19,8 +20,8 @@ const Myorders = () => {
     setMyAllOrders(myOrders);
   }, [allOrders]);
   const handleDeleteOrder = (id) => {
-    const url = `https:/ancient-sierra-47669.herokuapp.com/bookedPackages/${id}`;
-    console.log(id);
+    const url = `https://ancient-sierra-47669.herokuapp.com/bookedPackages/${id}`;
+
     fetch(url, {
       method: "DELETE",
     })
@@ -35,13 +36,13 @@ const Myorders = () => {
         window.location.reload();
       });
   };
-  console.log(myAllOrders);
+
   return (
     <div className="container">
       <div className="d-flex align-items-center justify-content-center title-styel">
         <div>
           <h1 className="title-styel text-center text-success mt-4">
-            You Total Booked {myAllOrders?.length} Tour Packages
+            You Total Booked {myAllOrders.length} Tour Packages
           </h1>
         </div>
       </div>
