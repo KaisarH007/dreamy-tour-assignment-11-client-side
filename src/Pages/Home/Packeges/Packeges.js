@@ -8,6 +8,7 @@ const Packeges = () => {
       .then((res) => res.json())
       .then((data) => setPackeges(data));
   }, []);
+
   return (
     <div className="container mt-5">
       <div className="center  d-flex align-items-center justify-content-center">
@@ -15,7 +16,7 @@ const Packeges = () => {
       </div>
       {packeges.map((packege) => (
         <div className="row">
-          <Packege key={packege.key} packege={packege}></Packege>
+          <Packege key={packege._id} packege={packege}></Packege>
         </div>
       ))}
     </div>

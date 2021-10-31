@@ -9,6 +9,7 @@ import {
 import { useState } from "react";
 import { useEffect } from "react";
 import initializeAuthentication from "../Firebase/firebase.init";
+import { useHistory, useLocation } from "react-router-dom";
 
 initializeAuthentication();
 
@@ -17,11 +18,16 @@ const useFirebase = () => {
   const [isLoading, setIsLoading] = useState(true);
   const auth = getAuth();
 
+  // const history = useHistory();
+  // const location = useLocation();
+  // const url = location.state?.from || "/home";
+
   const googleProvider = new GoogleAuthProvider();
 
   const handleGoogleLogIn = () => {
     signInWithPopup(auth, googleProvider).then((result) => {
       setUser(result.user);
+      // history.push(url);
     });
   };
 

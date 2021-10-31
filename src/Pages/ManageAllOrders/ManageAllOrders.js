@@ -5,7 +5,7 @@ import { Button } from "react-bootstrap";
 import useAuth from "../../Hooks/useAuth";
 const ManageAllOrders = () => {
   const [orderdPackages, setOrderedPackages] = useState([]);
-  const { isLoading } = useAuth();
+
   useEffect(() => {
     fetch("https://ancient-sierra-47669.herokuapp.com/bookedPackages")
       .then((res) => res.json())
@@ -28,7 +28,7 @@ const ManageAllOrders = () => {
       });
   };
 
-  if (isLoading) {
+  if (orderdPackages === []) {
     return (
       <div
         className=" d-flex align-items-center justify-content-center"
@@ -51,21 +51,18 @@ const ManageAllOrders = () => {
 
       <Row xs={1} md={4} className="g-4 my-2">
         {orderdPackages.map((orderdPackage) => (
-          <Col style={{ height: "400px" }}>
+          <Col>
             <Card>
-              <Card.Img variant="top" src={orderdPackage.bookedPackage.photo} />
+              <Card.Img
+                variant="top"
+                style={{ height: "100px" }}
+                src={orderdPackage.bookedPackage.photo}
+              />
               <Card.Body>
-                <Card.Title>{orderdPackage.bookedPackage.title}</Card.Title>
                 <Card.Text>
                   <p>
-                    <small> Name : </small>
+                    <small>Tourist: </small>
                     {orderdPackage.customerName}
-                  </p>
-                </Card.Text>
-                <Card.Text>
-                  <p>
-                    <small>ID : </small>
-                    {orderdPackage.bookedPackage._id}
                   </p>
                 </Card.Text>
                 <Card.Text>
@@ -73,6 +70,12 @@ const ManageAllOrders = () => {
                     <small>Email : </small> {orderdPackage.customerEmail}
                   </p>
                 </Card.Text>
+                {/* <Card.Text>
+                  <p>
+                    <small>ID : </small>
+                    {orderdPackage.bookedPackage._id}
+                  </p>
+                </Card.Text> */}
               </Card.Body>
               <Button
                 onClick={() => handleDeleteOrder(orderdPackage._id)}

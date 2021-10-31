@@ -75,7 +75,7 @@ const Myorders = () => {
                   className="fw-bold"
                   variant="danger"
                 >
-                  Delete
+                  Cancel Order
                 </Button>
               </Card.Body>
             </Card>
