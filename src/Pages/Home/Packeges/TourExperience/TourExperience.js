@@ -3,12 +3,16 @@ import photo1 from "../../../../images/tour-experience/h4-team-member-1.jpg";
 import photo2 from "../../../../images/tour-experience/h4-team-member-2.jpg";
 import photo3 from "../../../../images/tour-experience/h4-team-member-3.jpg";
 import photo4 from "../../../../images/tour-experience/h4-team-member-4.jpg";
+import logo from "../../../../images/logo/t-logo-1.png";
 import "./TourExperience.css";
 const TourExperience = () => {
   return (
-    <div>
+    <>
       <div className=" my-3 text-center d-flex align-items-center justify-content-center">
         <div>
+          <div className="center  d-flex align-items-center justify-content-center">
+            <img style={{ width: "70px" }} src={logo} alt="" />
+          </div>
           <h1 className="fw-bold">Our Achivements</h1>
         </div>
       </div>
@@ -62,7 +66,7 @@ const TourExperience = () => {
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

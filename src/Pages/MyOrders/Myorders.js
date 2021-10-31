@@ -20,22 +20,25 @@ const Myorders = () => {
     setMyAllOrders(myOrders);
   }, [allOrders]);
   const handleDeleteOrder = (id) => {
-    const url = `https://ancient-sierra-47669.herokuapp.com/bookedPackages/${id}`;
+    const response = window.confirm("Want to DELETE?");
 
-    fetch(url, {
-      method: "DELETE",
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        if (data.deleteCount) {
-          const remainingMyOrder = myAllOrders.filter(
-            (remainOrders) => remainOrders._id !== id
-          );
-          setMyAllOrders(remainingMyOrder);
-        }
-        window.location.reload();
-        window.confirm("Want to DELETE?");
-      });
+    if (response === true) {
+      const url = `https://ancient-sierra-47669.herokuapp.com/bookedPackages/${id}`;
+
+      fetch(url, {
+        method: "DELETE",
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          if (data.deleteCount) {
+            const remainingMyOrder = myAllOrders.filter(
+              (remainOrders) => remainOrders._id !== id
+            );
+            setMyAllOrders(remainingMyOrder);
+          }
+          window.location.reload();
+        });
+    }
   };
 
   return (

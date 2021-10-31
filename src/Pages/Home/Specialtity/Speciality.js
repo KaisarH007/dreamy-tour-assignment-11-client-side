@@ -3,12 +3,16 @@ import photo1 from "../../../images/speciality/sp-1.png";
 import photo2 from "../../../images/speciality/sp-2.png";
 import photo3 from "../../../images/speciality/sp-3.png";
 import photo4 from "../../../images/speciality/sp-4.png";
+import logo from "../../../images/logo/t-logo-3.png";
 const Speciality = () => {
   return (
     <div className="container my-5">
       <div className="center  d-flex align-items-center justify-content-center">
         <div>
-          <h1 className=" text-center fw-bold ">Our Specialites</h1>
+          <div className="center  d-flex align-items-center justify-content-center">
+            <img style={{ width: "100px" }} src={logo} alt="" />
+          </div>
+          <h1 className=" text-center fw-bold  ">Our Specialites</h1>
           <p className="text-center">
             Travel takes us out of our comfort zones and inspires us to see,
             taste and try new things. It constantly challenges us, not only to

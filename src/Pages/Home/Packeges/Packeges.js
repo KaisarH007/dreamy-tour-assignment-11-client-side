@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Spinner } from "react-bootstrap";
 import Packege from "../Packege/Packege";
-
+import logo from "../../../images/logo/t-logo-2.png";
 const Packeges = () => {
   const [packeges, setPackeges] = useState([]);
   useEffect(() => {
@@ -21,16 +21,12 @@ const Packeges = () => {
         <div>
           <div className="center  d-flex align-items-center justify-content-center">
             <div>
-              <h1 className=" text-center fw-bold ">
+              <div className="center  d-flex align-items-center justify-content-center">
+                <img style={{ width: "100px" }} src={logo} alt="" />
+              </div>
+              <h1 className=" text-center mb-4 fw-bold ">
                 Our Most Popular Tour Packeges
               </h1>
-              <p className="text-center">
-                Travel takes us out of our comfort zones and inspires us to see,
-                taste and try new things. It constantly challenges us, not only
-                to adapt to and explore new surroundings, but also to engage
-                with different people, to embrace adventures as they come and to
-                share new and meaningful experiences with friends and loved ones
-              </p>
             </div>
           </div>
           {packeges.map((packege) => (
