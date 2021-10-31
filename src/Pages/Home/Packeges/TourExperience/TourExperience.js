@@ -16,7 +16,7 @@ const TourExperience = () => {
           <h1 className="fw-bold">Our Achivements</h1>
         </div>
       </div>
-      <div className="row">
+      <div className="row g-0">
         <div className="col-md-3 g-0">
           <img style={{ width: "100%" }} src={photo1} alt="" />
         </div>
