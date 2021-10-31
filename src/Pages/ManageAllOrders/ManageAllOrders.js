@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from "react";
-import { Card, Col, Row } from "react-bootstrap";
+import { Card, Col, Row, Spinner } from "react-bootstrap";
 import AllOrders from "../AllOrders/AllOrders";
 import { Button } from "react-bootstrap";
+import useAuth from "../../Hooks/useAuth";
 const ManageAllOrders = () => {
   const [orderdPackages, setOrderedPackages] = useState([]);
+  const { isLoading } = useAuth();
   useEffect(() => {
     fetch("https://ancient-sierra-47669.herokuapp.com/bookedPackages")
       .then((res) => res.json())
@@ -25,6 +27,17 @@ const ManageAllOrders = () => {
         }
       });
   };
+
+  if (isLoading) {
+    return (
+      <div
+        className=" d-flex align-items-center justify-content-center"
+        style={{ height: "500px" }}
+      >
+        <Spinner animation="border" variant="success" />
+      </div>
+    );
+  }
 
   return (
     <div className="container">

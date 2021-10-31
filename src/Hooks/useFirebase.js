@@ -9,10 +9,14 @@ import {
 import { useState } from "react";
 import { useEffect } from "react";
 import initializeAuthentication from "../Firebase/firebase.init";
+
 initializeAuthentication();
+
 const useFirebase = () => {
   const [user, setUser] = useState({});
+  const [isLoading, setIsLoading] = useState(true);
   const auth = getAuth();
+
   const googleProvider = new GoogleAuthProvider();
 
   const handleGoogleLogIn = () => {
@@ -28,6 +32,7 @@ const useFirebase = () => {
       } else {
         setUser({});
       }
+      setIsLoading(false);
     });
     return () => unsubscribe;
   }, []);
@@ -41,6 +46,8 @@ const useFirebase = () => {
     user,
     handleGoogleLogIn,
     handleLogOut,
+    isLoading,
+    setIsLoading,
   };
 };
 
