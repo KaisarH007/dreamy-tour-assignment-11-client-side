@@ -20,18 +20,15 @@ const Login = () => {
   return (
     <div style={{ height: "100%" }} className="container">
       <div className="row">
-        <div className="col-md-6  d-flex align-items-center justify-content-center">
+        <div className="col-md-12 my-5  d-flex align-items-center justify-content-center">
           <div className="card p-5">
-            <h1>Please log In</h1>
+            <h1 className="fw-bold">Please log In</h1>
             <p>Login and get axiting experience with Dreamy Tour</p>
             <Button onClick={handleGoogleLogIn} variant="dark">
               <img style={{ width: "40px" }} src={logo} alt="" /> Log In With
-              Google Account
+              Google
             </Button>
           </div>
-        </div>
-        <div className="col-md-6">
-          <img style={{ width: "100%" }} src={loginBanner} alt="" />
         </div>
       </div>
     </div>

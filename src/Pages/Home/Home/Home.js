@@ -5,7 +5,7 @@ import Packeges from "../Packeges/Packeges";
 const Home = () => {
   return (
     <div>
-      <HomeBanner></HomeBanner>
+      {/* <HomeBanner></HomeBanner> */}
       <Packeges></Packeges>
     </div>
   );

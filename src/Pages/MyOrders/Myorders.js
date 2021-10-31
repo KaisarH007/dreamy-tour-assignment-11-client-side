@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Card, Col, Row } from "react-bootstrap";
+import { Card, Col, Row, Spinner } from "react-bootstrap";
 import useAuth from "../../Hooks/useAuth";
 import { Button } from "react-bootstrap";
 const Myorders = () => {
@@ -34,6 +34,7 @@ const Myorders = () => {
           setMyAllOrders(remainingMyOrder);
         }
         window.location.reload();
+        window.confirm("Want to DELETE?");
       });
   };
 

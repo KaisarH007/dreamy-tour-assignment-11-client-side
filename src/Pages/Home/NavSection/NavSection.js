@@ -9,22 +9,24 @@ import {
 } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import useAuth from "../../../Hooks/useAuth";
+import logo from "../../../images/travel-logo.png";
+import "./NavSection.css";
 
 const NavSection = () => {
   const { user, handleLogOut } = useAuth();
   return (
     <div>
       <Navbar
+        className="nav-bg"
         collapseOnSelect
         expand="lg"
-        bg="success"
         variant="dark"
         sticky="top"
       >
         <Container>
           <Navbar.Brand className="d-flex">
-            {/* <img style={{ width: "100px" }} src={logo} alt="" />{" "} */}
-            <h4 className="fw-bold mt-2"> Dreamy Tour</h4>
+            <img style={{ width: "100px" }} src={logo} alt="" />{" "}
+            <h4 className="fw-bold mt-4"> Dreamy Tour</h4>
           </Navbar.Brand>
           <Navbar.Toggle />
           <Navbar.Collapse className="justify-content-end  fs-5 fw-bold">
@@ -56,21 +58,26 @@ const NavSection = () => {
                   roundedCircle
                 />
               }
-              menuVariant="dark"
+              menuVariant="light"
             >
-              <Nav.Link className="text-white" as={Link} to="/myOrders/:id">
-                My Orders
-              </Nav.Link>
-              <Nav.Link className="text-white" as={Link} to="/manageAllOrders">
-                Manage All Orders
-              </Nav.Link>
-              <Nav.Link className="text-white" as={Link} to="/addNewPackege">
-                Add New Packege
-              </Nav.Link>
+              <div className="d-flex align-items-center justify-content-center">
+                <div>
+                  <div>
+                    <Image
+                      className="ms-2"
+                      style={{ width: "80px" }}
+                      src={user?.photoURL}
+                      roundedCircle
+                    />
+                  </div>
+                  <p>{user.displayName}</p>
+                </div>
+              </div>
+
               <NavDropdown.Item href="#action/3.4">
                 {user?.email && (
                   <Button
-                    className="m-2"
+                    className="ms-4"
                     variant="danger"
                     onClick={handleLogOut}
                   >

@@ -9,25 +9,12 @@ import banner4 from "../../../images/bannerImage/Best-Places-in-UK.jpg";
 const HomeBanner = () => {
   return (
     <div className="row">
-      {/* <div className="col-md-5">
-        <div className=" bg-warning text-center d-flex align-items-center justify-content-center">
-          <div>
-            <h1>Welcome to Dreamy Tour</h1>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Repellendus quasi accusamus qui animi. Excepturi a nam maiores
-              earum id quam voluptatibus in accusantium consectetur, beatae iure
-              recusandae exercitationem, ipsa illo.
-            </p>
-          </div>
-        </div>
-      </div> */}
       <div className="col-md-12">
         <Carousel>
           <Carousel.Item>
             <img
               className="d-block w-100 "
-              style={{ height: "300px", width: "100%" }}
+              style={{ height: "400px", width: "100%" }}
               src={banner1}
               alt="First slide"
             />
@@ -38,7 +25,7 @@ const HomeBanner = () => {
           <Carousel.Item>
             <img
               className="d-block w-100"
-              style={{ height: "300px", width: "100%" }}
+              style={{ height: "400px", width: "100%" }}
               src={banner2}
               alt="Second slide"
             />
@@ -50,7 +37,7 @@ const HomeBanner = () => {
           <Carousel.Item>
             <img
               className="d-block w-100"
-              style={{ height: "300px", width: "100%" }}
+              style={{ height: "400px", width: "100%" }}
               src={banner3}
               alt="Third slide"
             />
@@ -62,7 +49,7 @@ const HomeBanner = () => {
           <Carousel.Item>
             <img
               className="d-block w-100"
-              style={{ height: "300px", width: "100%" }}
+              style={{ height: "400px", width: "100%" }}
               src={banner4}
               alt="Fourth slide"
             />

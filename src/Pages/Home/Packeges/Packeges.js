@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Spinner } from "react-bootstrap";
 import Packege from "../Packege/Packege";
 
 const Packeges = () => {
@@ -11,14 +12,23 @@ const Packeges = () => {
 
   return (
     <div className="container mt-5">
-      <div className="center  d-flex align-items-center justify-content-center">
-        <h1 className="title-stye ">Our Tour Packeges</h1>
-      </div>
-      {packeges.map((packege) => (
-        <div className="row">
-          <Packege key={packege._id} packege={packege}></Packege>
+      {packeges.length === 0 ? (
+        // spiner
+        <div className=" d-flex align-items-center justify-content-center my-5">
+          <Spinner animation="border" variant="success" />
         </div>
-      ))}
+      ) : (
+        <div>
+          <div className="center  d-flex align-items-center justify-content-center">
+            <h1 className="title-stye ">Our Tour Packeges</h1>
+          </div>
+          {packeges.map((packege) => (
+            <div className="row">
+              <Packege key={packege._id} packege={packege}></Packege>
+            </div>
+          ))}
+        </div>
+      )}
     </div>
   );
 };

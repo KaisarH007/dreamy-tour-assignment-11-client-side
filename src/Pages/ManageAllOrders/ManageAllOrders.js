@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Card, Col, Row, Spinner } from "react-bootstrap";
-import AllOrders from "../AllOrders/AllOrders";
 import { Button } from "react-bootstrap";
-import useAuth from "../../Hooks/useAuth";
+
 const ManageAllOrders = () => {
   const [orderdPackages, setOrderedPackages] = useState([]);
 
@@ -26,10 +25,12 @@ const ManageAllOrders = () => {
           setOrderedPackages(remainingServices);
         }
       });
+    window.confirm("Want to DELETE?");
   };
 
-  if (orderdPackages === []) {
+  if (orderdPackages.length === 0) {
     return (
+      // spiner
       <div
         className=" d-flex align-items-center justify-content-center"
         style={{ height: "500px" }}
@@ -70,12 +71,6 @@ const ManageAllOrders = () => {
                     <small>Email : </small> {orderdPackage.customerEmail}
                   </p>
                 </Card.Text>
-                {/* <Card.Text>
-                  <p>
-                    <small>ID : </small>
-                    {orderdPackage.bookedPackage._id}
-                  </p>
-                </Card.Text> */}
               </Card.Body>
               <Button
                 onClick={() => handleDeleteOrder(orderdPackage._id)}
