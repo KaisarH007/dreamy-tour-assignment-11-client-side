@@ -14,11 +14,14 @@ const AddNewPackege = () => {
     console.log(data);
   };
   return (
-    <div className="add-service">
+    <div className="add-service mb-5">
       <div className="d-flex align-items-center justify-content-center title-styel">
         <div>
           <h1 className="title-styel text-center">Add New</h1>
-          <h1 className="title-styel">Tour Packege</h1>
+          <h1 className="title-styel">
+            {" "}
+            <span className="title-color">Tour Package</span>{" "}
+          </h1>
         </div>
       </div>
       <form onSubmit={handleSubmit(onSubmit)}>

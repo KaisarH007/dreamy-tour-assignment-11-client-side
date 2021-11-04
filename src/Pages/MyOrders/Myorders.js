@@ -45,8 +45,10 @@ const Myorders = () => {
     <div className="container">
       <div className="d-flex align-items-center justify-content-center title-styel">
         <div>
-          <h1 className="title-styel text-center text-success mt-4">
-            You Total Booked {myAllOrders.length} Tour Packages
+          <h1 className="title-styel  text-center mt-4">
+            You Total Booked{" "}
+            <span className="title-color">0{myAllOrders.length}</span> Tour
+            Packages
           </h1>
         </div>
       </div>
@@ -60,7 +62,9 @@ const Myorders = () => {
                 src={myOrders?.bookedPackage?.photo}
               />
               <Card.Body>
-                <Card.Title>{myOrders?.bookedPackage?.title}</Card.Title>
+                <Card.Title className="title-color">
+                  {myOrders?.bookedPackage?.title}
+                </Card.Title>
                 <Card.Text>
                   <p>
                     <small> Date: </small>
@@ -79,7 +83,7 @@ const Myorders = () => {
                   className="fw-bold"
                   variant="danger"
                 >
-                  Cancel Order
+                  Cancel
                 </Button>
               </Card.Body>
             </Card>

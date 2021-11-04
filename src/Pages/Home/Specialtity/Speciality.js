@@ -12,7 +12,9 @@ const Speciality = () => {
           <div className="center  d-flex align-items-center justify-content-center">
             <img style={{ width: "100px" }} src={logo} alt="" />
           </div>
-          <h1 className=" text-center fw-bold  ">Our Specialities</h1>
+          <h1 className=" text-center fw-bold  ">
+            Dreamy Tour's <span className="title-color">Specialities</span>
+          </h1>
           <p className="text-center">
             Travel takes us out of our comfort zones and inspires us to see,
             taste and try new things. It constantly challenges us, not only to
@@ -33,7 +35,7 @@ const Speciality = () => {
                 alt=""
               />
             </div>
-            <div className="card-body text-center">
+            <div className="card-body text-center ">
               <h3>Best Price Garunated</h3>
               <p>
                 We Provide Best Price to Our Customers.We Provide Best Price to

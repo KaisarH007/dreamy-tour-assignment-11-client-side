@@ -43,11 +43,13 @@ const ManageAllOrders = () => {
   }
 
   return (
-    <div className="container">
+    <div className="container my-5">
       <div className="d-flex align-items-center justify-content-center title-styel">
         <div>
-          <h1 className="title-styel text-center text-success mt-2">
-            Total Orders {orderdPackages.length}
+          <h1 className="title-styel  text-center mt-4">
+            You Total Booked{" "}
+            <span className="title-color">0{orderdPackages.length}</span> Tour
+            Packages
           </h1>
         </div>
       </div>

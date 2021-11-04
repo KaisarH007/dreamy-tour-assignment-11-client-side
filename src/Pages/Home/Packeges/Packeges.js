@@ -25,12 +25,12 @@ const Packeges = () => {
                 <img style={{ width: "100px" }} src={logo} alt="" />
               </div>
               <h1 className=" text-center mb-4 fw-bold ">
-                Our Most Popular Tour Packeges
+                Most Popular <span className="title-color">Tour Packeges</span>
               </h1>
             </div>
           </div>
           {packeges.map((packege) => (
-            <div className="row">
+            <div className="row mb-4">
               <Packege key={packege._id} packege={packege}></Packege>
             </div>
           ))}

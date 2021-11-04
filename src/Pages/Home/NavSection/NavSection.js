@@ -15,7 +15,7 @@ import "./NavSection.css";
 const NavSection = () => {
   const { user, handleLogOut } = useAuth();
   return (
-    <div>
+    <>
       <Navbar
         className="nav-bg"
         collapseOnSelect
@@ -26,8 +26,12 @@ const NavSection = () => {
         <Container>
           <Navbar.Brand>
             <Nav.Link className="text-white d-flex" as={Link} to="/home">
-              <img style={{ width: "100px" }} src={logo} alt="" />
-              <h4 className="fw-bold mt-4"> Dreamy Tour</h4>
+              <img
+                style={{ width: "70px", height: "60px" }}
+                src={logo}
+                alt=""
+              />
+              <h4 className="fw-bold mt-3"> Dreamy Tour</h4>
             </Nav.Link>
           </Navbar.Brand>
           <Navbar.Toggle />
@@ -35,12 +39,16 @@ const NavSection = () => {
             <Nav.Link className="text-white" as={Link} to="/home">
               Home
             </Nav.Link>
-            <Nav.Link className="text-white" as={Link} to="/addNewPackege">
-              Add New Packege
-            </Nav.Link>
-            <Nav.Link className="text-white" as={Link} to="/manageAllOrders">
-              Manage All Orders
-            </Nav.Link>
+            {user.email === "kaisarh007@gmail.com" && (
+              <Nav.Link className="text-white" as={Link} to="/addNewPackege">
+                Add New Packege
+              </Nav.Link>
+            )}
+            {user.email === "kaisarh007@gmail.com" && (
+              <Nav.Link className="text-white" as={Link} to="/manageAllOrders">
+                Manage All Orders
+              </Nav.Link>
+            )}
             <Nav.Link className="text-white" as={Link} to="/myOrders">
               My Orders
             </Nav.Link>
@@ -92,7 +100,7 @@ const NavSection = () => {
           <Nav className="me-auto"></Nav>
         </Container>
       </Navbar>
-    </div>
+    </>
   );
 };
 

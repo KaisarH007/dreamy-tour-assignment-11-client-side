@@ -39,8 +39,8 @@ const OrderDetails = () => {
         </div>
         <div className="col-md-6 d-flex align-items-center justify-content-center">
           <div>
-            <h2>{title}</h2>
-            <h4 className="text-primary">${price}</h4>
+            <h2 className="title-color">{title}</h2>
+            <h4 className="title-color fw-bold">${price} </h4>
             <p>{description}</p>
           </div>
         </div>

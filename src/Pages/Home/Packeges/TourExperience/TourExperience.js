@@ -13,7 +13,9 @@ const TourExperience = () => {
           <div className="center  d-flex align-items-center justify-content-center">
             <img style={{ width: "70px" }} src={logo} alt="" />
           </div>
-          <h1 className="fw-bold">Our Achivements</h1>
+          <h1 className="fw-bold  ">
+            Dreamy Tour's <span className="title-color">Achivements</span>
+          </h1>
         </div>
       </div>
       <div className="row g-0">

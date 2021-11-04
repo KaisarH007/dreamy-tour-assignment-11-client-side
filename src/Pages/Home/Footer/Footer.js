@@ -1,5 +1,5 @@
 import React from "react";
-import { Button } from "react-bootstrap";
+import { Button, Form } from "react-bootstrap";
 import "./Footer.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPhone, faMailBulk } from "@fortawesome/free-solid-svg-icons";
@@ -19,7 +19,7 @@ const Footer = () => {
               <img style={{ width: "100px" }} src={logo} alt="" /> Dreamy
               Travels
             </h3>
-            <p className="text-muted">
+            <p className="">
               Travel takes us out of our comfort zones and inspires us to see,
               taste and try new things. It constantly challenges us, not only to
               adapt to and explore new surroundings.
@@ -38,14 +38,25 @@ const Footer = () => {
 
           <div className="col-md-4">
             <h4 className="text-center">Subscrib</h4>
-            <input
-              className="p-2 rounded m-2"
-              type="text"
-              placeholder="Enter your email"
-            />
-            <Button className="p-2 btn  button-bg">Submit</Button>
+            <Form>
+              <Form.Group
+                className="mb-3"
+                controlId="exampleForm.ControlInput1"
+              >
+                <Form.Label>Email address</Form.Label>
+                <Form.Control type="email" placeholder="name@example.com" />
+              </Form.Group>
+              <Form.Group
+                className="mb-3"
+                controlId="exampleForm.ControlTextarea1"
+              >
+                <Form.Label>Your Suggestion or Feedback</Form.Label>
+                <Form.Control as="textarea" rows={3} />
+              </Form.Group>
+            </Form>
+            <Button className="p-2 btn  ">Submit</Button>
             <p>
-              <small className="text-muted">
+              <small className="">
                 Get the latest news and updates right at your inbox.
               </small>
             </p>
@@ -53,7 +64,7 @@ const Footer = () => {
         </div>
       </div>
       <hr />
-      <div className="text-center text-muted p-2">
+      <div className="text-center  p-2">
         <p>&copy; 2021 Dreamy Travels. All rights reserved</p>
       </div>
     </div>
