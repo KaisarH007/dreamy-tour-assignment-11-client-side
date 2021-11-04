@@ -34,10 +34,10 @@ const ManageAllOrders = () => {
     return (
       // spiner
       <div
-        className=" d-flex align-items-center justify-content-center"
+        className="  d-flex align-items-center justify-content-center"
         style={{ height: "500px" }}
       >
-        <Spinner animation="border" variant="success" />
+        <Spinner className="title-color" animation="border" />
       </div>
     );
   }
@@ -57,7 +57,7 @@ const ManageAllOrders = () => {
       <Row xs={1} md={4} className="g-4 my-2">
         {orderdPackages.map((orderdPackage) => (
           <Col>
-            <Card>
+            <Card className="card-style">
               <Card.Img
                 variant="top"
                 style={{ height: "100px" }}
@@ -75,14 +75,14 @@ const ManageAllOrders = () => {
                     <small>Email : </small> {orderdPackage.customerEmail}
                   </p>
                 </Card.Text>
+                <Button
+                  onClick={() => handleDeleteOrder(orderdPackage._id)}
+                  className="fw-bold text-white button-bg"
+                  variant=""
+                >
+                  Delete
+                </Button>
               </Card.Body>
-              <Button
-                onClick={() => handleDeleteOrder(orderdPackage._id)}
-                className="fw-bold"
-                variant="danger"
-              >
-                Delete
-              </Button>
             </Card>
           </Col>
         ))}

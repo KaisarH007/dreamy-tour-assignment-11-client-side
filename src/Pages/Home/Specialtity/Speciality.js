@@ -24,9 +24,9 @@ const Speciality = () => {
           </p>
         </div>
       </div>
-      <div className="row">
+      <div className="row g-4">
         <div className="col-md-3">
-          <div className="card pt-4 h-100">
+          <div className="card pt-4 h-100 card-style">
             <div className="d-flex align-items-center justify-content-center">
               <img
                 className="rounded-circle "
@@ -45,7 +45,7 @@ const Speciality = () => {
           </div>
         </div>
         <div className="col-md-3">
-          <div className="card pt-4 h-100">
+          <div className="card pt-4 h-100 card-style">
             <div className="d-flex align-items-center justify-content-center">
               <img
                 className="rounded-circle "
@@ -66,7 +66,7 @@ const Speciality = () => {
           </div>
         </div>
         <div className="col-md-3">
-          <div className="card pt-4 h-100">
+          <div className="card pt-4 h-100 card-style">
             <div className="d-flex align-items-center justify-content-center">
               <img
                 className="rounded-circle "
@@ -87,7 +87,7 @@ const Speciality = () => {
           </div>
         </div>
         <div className="col-md-3">
-          <div className="card pt-4 h-100">
+          <div className="card pt-4 h-100 card-style">
             <div className="d-flex align-items-center justify-content-center">
               <img
                 className="rounded-circle "

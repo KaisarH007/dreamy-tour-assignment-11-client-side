@@ -42,7 +42,7 @@ const Myorders = () => {
   };
 
   return (
-    <div className="container">
+    <div className="container mb-5">
       <div className="d-flex align-items-center justify-content-center title-styel">
         <div>
           <h1 className="title-styel  text-center mt-4">
@@ -52,10 +52,10 @@ const Myorders = () => {
           </h1>
         </div>
       </div>
-      <Row xs={1} md={2} className="g-4 my-2">
+      <Row xs={1} md={3} className="g-4 my-2">
         {myAllOrders.map((myOrders) => (
           <Col>
-            <Card style={{ height: "370px" }}>
+            <Card className="card-style" style={{ height: "370px" }}>
               <Card.Img
                 variant="top"
                 style={{ height: "190px" }}

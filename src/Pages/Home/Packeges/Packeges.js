@@ -15,7 +15,7 @@ const Packeges = () => {
       {packeges.length === 0 ? (
         // spiner
         <div className=" d-flex align-items-center justify-content-center my-5">
-          <Spinner animation="border" variant="success" />
+          <Spinner className="title-color" animation="border" />
         </div>
       ) : (
         <div>
