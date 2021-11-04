@@ -11,7 +11,7 @@ const PrivateRoute = ({ children, ...rest }) => {
         className=" d-flex align-items-center justify-content-center"
         style={{ height: "500px" }}
       >
-        <Spinner animation="border" variant="success" />
+        <Spinner animation="border" className="title-color" />
       </div>
     );
   }

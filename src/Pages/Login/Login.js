@@ -1,8 +1,7 @@
 import React from "react";
 import { Button } from "react-bootstrap";
-
-import loginBanner from "../../images/login-photo.jpg";
-import logo from "../../images/Google__G__Logo.svg.png";
+import logo from "../../images/travel-logo.png";
+import googleLogo from "../../images/Google__G__Logo.svg.png";
 import useAuth from "../../Hooks/useAuth";
 import { useHistory, useLocation } from "react-router";
 const Login = () => {
@@ -21,12 +20,24 @@ const Login = () => {
     <div style={{ height: "100%" }} className="container">
       <div className="row">
         <div className="col-md-12 my-5  d-flex align-items-center justify-content-center">
-          <div className="card p-5">
-            <h1 className="fw-bold">Please log In</h1>
+          <div className="card card-style p-5">
+            <div className="d-flex align-items-center justify-content-center">
+              <div>
+                <img style={{ width: "200px" }} src={logo} alt="" />
+                <h1 className="fw-bold">
+                  Dreamy <span className="title-color">Tour</span>
+                </h1>
+              </div>
+            </div>
+
             <p>Login and get axiting experience with Dreamy Tour</p>
-            <Button onClick={handleGoogleLogIn} variant="dark">
-              <img style={{ width: "40px" }} src={logo} alt="" /> Log In With
-              Google
+            <Button
+              className="card-style"
+              onClick={handleGoogleLogIn}
+              variant="dark"
+            >
+              <img style={{ width: "40px" }} src={googleLogo} alt="" /> Log In
+              With Google
             </Button>
           </div>
         </div>
