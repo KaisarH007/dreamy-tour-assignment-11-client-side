@@ -13,6 +13,8 @@ textarea {
   width: 60%;
   margin-bottom: 15px;
   padding: 10px;
+  border: 1px solid #ff681a;
+  border-radius: 5px;
 }
 .title-styel {
   font-size: 30px;

@@ -4,10 +4,12 @@ import { useForm } from "react-hook-form";
 
 import useAuth from "../../Hooks/useAuth";
 import axios from "axios";
+import { Spinner } from "react-bootstrap";
+import "./OrderDetails.css";
 const OrderDetails = () => {
   const { packageID } = useParams();
   const [packageDetails, setPackageDetails] = useState({});
-  const { user } = useAuth();
+  const { user, isLoading } = useAuth();
   const { title, price, description, photo } = packageDetails;
 
   useEffect(() => {
@@ -30,6 +32,17 @@ const OrderDetails = () => {
       });
     console.log(data);
   };
+
+  if (isLoading) {
+    return (
+      <div
+        className=" d-flex align-items-center justify-content-center"
+        style={{ height: "500px" }}
+      >
+        <Spinner animation="border" className="title-color" />
+      </div>
+    );
+  }
 
   return (
     <div className="container my-5">
@@ -54,7 +67,7 @@ const OrderDetails = () => {
             </p>
           </div>
         </div>
-        <form onSubmit={handleSubmit(onSubmit)}>
+        <form className="form-style" onSubmit={handleSubmit(onSubmit)}>
           <input
             defaultValue={user?.displayName}
             {...register("customerName")}
