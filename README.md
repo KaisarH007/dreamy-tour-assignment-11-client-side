@@ -1,6 +1,6 @@
-# Welcome to my New React Node Js Project
+# Welcome to my New MERN Stack Project Dreamy Tour
 
-This is my project live site link [Live Preview](https://dreamy-tour.web.app/).
+This is a Tour Service Web App [Live Preview](https://dreamy-tour.web.app/).
 
 # My Project Features
 
