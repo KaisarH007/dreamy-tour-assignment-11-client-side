@@ -39,16 +39,15 @@ const NavSection = () => {
             <Nav.Link className="text-white" as={Link} to="/home">
               Home
             </Nav.Link>
-            {user.email === "kaisarh007@gmail.com" && (
-              <Nav.Link className="text-white" as={Link} to="/addNewPackege">
-                Add New Packege
-              </Nav.Link>
-            )}
-            {user.email === "kaisarh007@gmail.com" && (
-              <Nav.Link className="text-white" as={Link} to="/manageAllOrders">
-                Manage All Orders
-              </Nav.Link>
-            )}
+
+            <Nav.Link className="text-white" as={Link} to="/addNewPackege">
+              Add New Packege
+            </Nav.Link>
+
+            <Nav.Link className="text-white" as={Link} to="/manageAllOrders">
+              Manage All Orders
+            </Nav.Link>
+
             <Nav.Link className="text-white" as={Link} to="/myOrders">
               My Orders
             </Nav.Link>
