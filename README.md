@@ -2,22 +2,6 @@
 
 This is my project live site link [Live Preview](https://dreamy-tour.web.app/).
 
-## What I use in this projects
-
-### React Js
-
-### React Bootstrap
-
-### React route
-
-### React Font Awsome
-
-### Firebase
-
-### Mongo DB
-
-### Node Js
-
 # My Project Features
 
 ### This is na Tour Agency Demo website
