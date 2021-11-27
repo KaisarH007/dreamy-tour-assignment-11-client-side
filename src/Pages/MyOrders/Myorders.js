@@ -46,7 +46,7 @@ const Myorders = () => {
       <div className="d-flex align-items-center justify-content-center title-styel">
         <div>
           <h1 className="title-styel  text-center mt-4">
-            You Total Booked{" "}
+            You Total Booked
             <span className="title-color">0{myAllOrders.length}</span> Tour
             Packages
           </h1>

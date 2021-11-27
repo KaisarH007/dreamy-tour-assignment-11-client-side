@@ -12,7 +12,7 @@ import NotFound from "./Pages/NotFound/NotFound";
 import AuthProvider from "./AuthProvider/AuthProvider";
 import Myorders from "./Pages/MyOrders/Myorders";
 import PrivateRoute from "./Private/PrivateRoute";
-import useAuth from "./Hooks/useAuth";
+
 import useFirebase from "./Hooks/useFirebase";
 
 function App() {
@@ -31,16 +31,14 @@ function App() {
           <Route path="/login">
             <Login></Login>
           </Route>
-          {user.email === "kaisarh007@gmail.com" && (
-            <PrivateRoute path="/addNewPackege">
-              <AddNewPackege></AddNewPackege>
-            </PrivateRoute>
-          )}
-          {user?.email === "kaisarh007@gmail.com" && (
-            <PrivateRoute path="/manageAllOrders">
-              <ManageAllOrders></ManageAllOrders>
-            </PrivateRoute>
-          )}
+
+          <PrivateRoute path="/addNewPackege">
+            <AddNewPackege></AddNewPackege>
+          </PrivateRoute>
+
+          <PrivateRoute path="/manageAllOrders">
+            <ManageAllOrders></ManageAllOrders>
+          </PrivateRoute>
           <PrivateRoute path="/myOrders">
             <Myorders></Myorders>
           </PrivateRoute>

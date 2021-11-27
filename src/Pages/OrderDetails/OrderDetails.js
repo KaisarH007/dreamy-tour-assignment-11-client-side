@@ -23,11 +23,12 @@ const OrderDetails = () => {
   const { register, handleSubmit, reset } = useForm();
   const onSubmit = (data) => {
     data.bookedPackage = packageDetails;
+
     axios
       .post("https://ancient-sierra-47669.herokuapp.com/bookedPackage", data)
       .then((res) => {
         console.log(res);
-        alert("orderd confirm");
+        alert("order confirm");
         reset();
       });
     console.log(data);
@@ -70,13 +71,13 @@ const OrderDetails = () => {
         <form className="form-style" onSubmit={handleSubmit(onSubmit)}>
           <input
             defaultValue={user?.displayName}
-            {...register("customerName")}
+            {...register("name")}
             required
             placeholder="Name"
           />
           <input
             defaultValue={user?.email}
-            {...register("customerEmail")}
+            {...register("email")}
             required
             placeholder="Email"
           />
